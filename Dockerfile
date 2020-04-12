@@ -1,5 +1,5 @@
 # Grab armv7 base image
-FROM bademux/rtl_433tomqtt@sha256-b0541ead69a5c27dbd44c4a2b4741eb0435c34e76e5c4943e8c32ab3d7226844
+FROM bademux/rtl_433tomqtt@sha256:b0541ead69a5c27dbd44c4a2b4741eb0435c34e76e5c4943e8c32ab3d7226844
 
 WORKDIR /tmp
 RUN apk add --no-cache --virtual .build-deps git bash autoconf automake libtool && \
