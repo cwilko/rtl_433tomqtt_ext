@@ -6,8 +6,9 @@ RUN apk add --no-cache --virtual .build-deps git bash cmake build-base autoconf 
     apk add --no-cache fftw fftw-dev --repository https://dl-3.alpinelinux.org/alpine/edge/testing/ && \
 
     # Install kalibrate-rtl
-    git clone https://github.com/steve-m/kalibrate-rtl.git && \
+    git clone https://github.com/asdil12/kalibrate-rtl.git && \
     cd kalibrate-rtl && \
+    git checkout arm_memory && \
     ./bootstrap && \
     LIBRTLSDR_LIBS=-lrtlsdr CXXFLAGS='-W -Wall -O3' ./configure && \
     LIBRTLSDR_LIBS=-lrtlsdr make && \
