@@ -9,8 +9,8 @@ RUN apk add --no-cache --virtual .build-deps git bash cmake build-base autoconf 
     git clone https://github.com/steve-m/kalibrate-rtl.git && \
     cd kalibrate-rtl && \
     ./bootstrap && \
-    LIBRTLSDR_CFLAGS=-lrtlsdr CXXFLAGS='-W -Wall -O3' ./configure && \
-    make && \
+    LIBRTLSDR_LIBS=-lrtlsdr CXXFLAGS='-W -Wall -O3' ./configure && \
+    LIBRTLSDR_LIBS=-lrtlsdr make && \
     make install && \
 
     apk del .build-deps
