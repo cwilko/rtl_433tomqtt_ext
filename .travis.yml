@@ -1,0 +1,17 @@
+arch: arm32
+
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+
+install:
+  - docker build -t cwilko/rtl_433tomqtt_ext:arm32v7
+
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push cwilko/rtl_433tomqtt_ext:arm32v7
