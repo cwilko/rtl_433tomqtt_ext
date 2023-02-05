@@ -1,6 +1,6 @@
 # https://hub.docker.com/layers/bademux/rtl_433tomqtt/0.0.5/images/sha256-b0541ead69a5c27dbd44c4a2b4741eb0435c34e76e5c4943e8c32ab3d7226844?context=explore
 
-FROM bademux/rtl_433tomqtt:0.0.5
+FROM bademux/rtl_433tomqtt:0.2.1
 
 USER root
 WORKDIR /tmp
