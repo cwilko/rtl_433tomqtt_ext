@@ -3,6 +3,8 @@
 FROM bademux/rtl_433tomqtt:0.2.1
 
 WORKDIR /tmp
+
+USER root
 RUN apk add --no-cache --virtual .build-deps git bash cmake build-base autoconf automake libtool
 RUN apk add --no-cache libstdc++ fftw fftw-dev --repository https://dl-3.alpinelinux.org/alpine/edge/testing
 
