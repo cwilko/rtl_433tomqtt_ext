@@ -27,6 +27,6 @@ jobs:
         with:
           context: .
           push: true
-          # This build doesn't work on arm64 for some reason
-          platforms: linux/arm
+          # This build doesn't work on arm64 for some
+          platforms: linux/arm/v7, linux/arm64
           tags: ${{ github.repository }}:latest
